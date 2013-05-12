@@ -21,4 +21,10 @@ git push https://github.com/cchafe/faust-pd-modalbar-bells.git master
 git add README.txt
 git commit -m "add README.txt" -a
 
+start structuring the directory:
+mkdir ck
+git add .
+git commit -m "add ck/" -a
+git push https://github.com/cchafe/faust-pd-modalbar-bells.git master
+
 
