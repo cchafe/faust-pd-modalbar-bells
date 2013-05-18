@@ -17,10 +17,10 @@ cp ../../faustFromGit/examples/faust-stk/modalBar.h .
 
 ################################
 # then comment the faust cmd above and switch to this
-#g++ -fPIC -DPD -Wall -g -shared -Dmydsp=$1 -o $1~.pd_linux  $1.cpp
+# g++ -fPIC -DPD -Wall -g -shared -Dmydsp=$1 -o $1~.pd_linux  $1.cpp
 
 
 cp $1~.pd_linux ../pd/
 
 cd ../pd
-pdextended modalBarUI.pd &
+pdextended $1.pd &
