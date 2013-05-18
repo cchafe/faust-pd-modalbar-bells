@@ -1,3 +1,5 @@
+This'll bring in and compile faust, bring in and compile for Pd the polartide bells, for linux and mac
+
 pwd
 mkdir <project>
 cd <project>
@@ -21,12 +23,13 @@ chmod +x build*
 <build whichever> modalBarUI
 <build whichever> bellPend
 
+buildOnLinux is a two-stage process with intermediate edits, see the script
 ________________________
 ________________________
 
 to work on the clone:
-git config --global user.name "cchafe"
-git config --global user.email chafe@stanford.edu
+git config --global user.name "user"
+git config --global user.email usermailname@domain
 
 example edit/commit/push
 [edit README.md]
