@@ -6,7 +6,7 @@ cp ../../faustFromGit/examples/faust-stk/modalBar.h .
 
 ################################
 # generate the .cpp
-../../faustDir/sys/bin/faust -a puredata.cpp -o $1.cpp $1.dsp
+#../../faustDir/sys/bin/faust -a puredata.cpp -o $1.cpp $1.dsp
 
 # edit it -- obviously these are not comments really but includes
 # include "instrument.h"
@@ -17,7 +17,7 @@ cp ../../faustFromGit/examples/faust-stk/modalBar.h .
 
 ################################
 # then comment the faust cmd above and switch to this
-# g++ -fPIC -DPD -Wall -g -shared -Dmydsp=$1 -o $1~.pd_linux  $1.cpp
+g++ -fPIC -DPD -Wall -g -shared -Dmydsp=$1 -o $1~.pd_linux  $1.cpp
 
 
 cp $1~.pd_linux ../pd/
