@@ -1,4 +1,4 @@
-cd dsp
+cd ../dsp
 cp ../../faustDir/instrument.* .
 cp ../../faustDir/*.h .
 cp -r ../../faustDir/faust .
