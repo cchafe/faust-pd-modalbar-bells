@@ -1,34 +1,28 @@
-for faust: git clone git://git.code.sf.net/p/faudiostream/code faust
+pwd
+mkdir <project>
+cd <project>
 
-for subsequent faust updates:
-git pull
-  make
-  sudo make install
-
-or to install but not system files, say with source in faustFromGit
-and faust system in /user/c/cc/faustDir/sys
-
-git clone git://git.code.sf.net/p/faudiostream/code faustFromGit
-change
-./Makefile 
-DESTDIR ?= /user/c/cc/faustDir
+1) git clone https://github.com/cchafe/faust-pd-modalbar-bells.git faust-pd-modalbar-bells
+2) git clone git://git.code.sf.net/p/faudiostream/code faustFromGit
+3) edit faustFromGit/Makefile 
+e.g., <pwd> = /user/c/cc/<project>
+DESTDIR ?= /user/c/cc/<project>/faustDir
 PREFIX ?= /sys
 
 tools/faust2appls/Makefile
-DESTDIR ?= /user/c/cc/faustDir
+DESTDIR ?= /user/c/cc/<project>/faustDir
 PREFIX ?= /sys
 make
 make install
 
-and for faust-stk modalBar these are needed in .dsp
-faust-stk
-instrument.lib instrument.h
-modalBar.dsp modalBar.h
+4)
+cd faust-pd-modalbar-bells/sh
+chmod +x build*
+<build whichever> modalBarUI
+<build whichever> bellPend
 
-______________
-for clone of this work:
-
-git clone https://github.com/cchafe/faust-pd-modalbar-bells.git faust-pd-modalbar-bells
+________________________
+________________________
 
 to work on the clone:
 git config --global user.name "cchafe"
@@ -51,5 +45,15 @@ mkdir ck
 [put stuff in it]
 git commit -m "add ck/*" -a
 git push https://github.com/cchafe/faust-pd-modalbar-bells.git master
+
+________________________
+________________________
+for faust: git clone git://git.code.sf.net/p/faudiostream/code faust
+
+for subsequent faust updates:
+git pull
+  make
+  sudo make install
+
 
 
