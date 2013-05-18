@@ -1,7 +1,6 @@
 cd ../dsp
-cp ../../faustDir/instrument.* .
-cp ../../faustDir/*.h .
-cp -r ../../faustDir/faust .
+cp ../../faustFromGit/examples/faust-stk/instrument.* .
+cp ../../faustFromGit/examples/faust-stk/modalBar.h .
 
 ../../faustDir/sys/bin/faust -a puredata.cpp -o $1.cpp $1.dsp
 
