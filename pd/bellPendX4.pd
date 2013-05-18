@@ -1,0 +1,61 @@
+#N canvas 689 45 603 313 10;
+#X obj 431 279 dac~;
+#X msg 462 117 hit 1;
+#X msg 507 148 hit 0;
+#X msg 337 88 users \$1;
+#X obj 383 52 hsl 128 15 0.001 1 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 900 1;
+#X obj 504 81 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 507 117 pipe 2;
+#X text 346 34 0 users up to a whole bunch of users;
+#X text 528 79 hit me;
+#X text 475 251 output gain;
+#X obj 367 229 bellPend~;
+#X obj 204 -2 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 228 -4 hit me;
+#X msg 162 34 poke 1;
+#X msg 256 80 poke 0;
+#X text 242 15 comment;
+#X obj 261 40 pipe 10;
+#X obj 27 27 vsl 15 128 5 200 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2400 1;
+#X msg 32 185 amp \$1;
+#X obj 70 19 vsl 15 128 0.9999 1 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 3300 1;
+#X msg 84 170 que \$1;
+#X obj 116 16 vsl 15 128 0 10 0 0 empty empty empty 0 -9 0 10 -262144
+-1 -1 2700 1;
+#X msg 149 167 fre \$1;
+#X obj 386 259 *~ \$1;
+#X obj 432 253 *~ \$1;
+#X obj 450 215 hsl 128 15 1 10 0 0 empty empty empty -2 -8 0 10 -262144
+-1 -1 8700 1;
+#X obj 356 0 loadbang;
+#X connect 1 0 10 0;
+#X connect 2 0 10 0;
+#X connect 3 0 10 0;
+#X connect 4 0 3 0;
+#X connect 5 0 1 0;
+#X connect 5 0 6 0;
+#X connect 6 0 2 0;
+#X connect 10 1 23 0;
+#X connect 10 2 24 0;
+#X connect 11 0 13 0;
+#X connect 11 0 16 0;
+#X connect 13 0 10 0;
+#X connect 14 0 10 0;
+#X connect 16 0 14 0;
+#X connect 17 0 18 0;
+#X connect 18 0 10 0;
+#X connect 19 0 20 0;
+#X connect 20 0 10 0;
+#X connect 21 0 22 0;
+#X connect 22 0 10 0;
+#X connect 23 0 0 0;
+#X connect 24 0 0 1;
+#X connect 25 0 23 1;
+#X connect 25 0 24 1;
+#X connect 26 0 4 0;
+#X connect 26 0 25 0;
