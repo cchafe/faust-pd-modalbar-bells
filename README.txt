@@ -1,3 +1,8 @@
+For the piece:
+water sound for web buttons = modalBarUI
+water sound for installation speakers & radio = clapPend
+oil sound for web buttons, installation speakers & radio = liberTine
+____________________________________________________________________
 This'll bring in and compile faust, bring in and compile for Pd the polartide bells, for linux and mac
 
 pwd
@@ -21,7 +26,8 @@ make install
 cd faust-pd-modalbar-bells/sh
 chmod +x build*
 <build whichever> modalBarUI
-<build whichever> bellPend
+<build whichever> clapPend
+<build whichever> liberTine
 
 buildOnLinux is a two-stage process with intermediate edits, see the script
 ________________________
